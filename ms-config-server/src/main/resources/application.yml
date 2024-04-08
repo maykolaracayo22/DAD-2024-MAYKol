@@ -1,3 +1,4 @@
+
 server:
   port: 7070
 
@@ -10,7 +11,7 @@ spring:
       server:
         git:
           uri: https://github.com/maykolaracayo22/DAD-2024-MAYKol.git # ruta del repositorio git
-          searchPaths: config data
+          searchPaths: config-data
           #username:
           #password:
           default-label: main
@@ -22,4 +23,3 @@ spring:
     user:
       name: root
       password: 123456
-

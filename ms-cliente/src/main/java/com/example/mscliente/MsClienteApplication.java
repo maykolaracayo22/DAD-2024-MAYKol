@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+
 public class MsClienteApplication {
 
     public static void main(String[] args) {
@@ -16,9 +17,9 @@ public class MsClienteApplication {
     @Bean
     public OpenAPI custumOpenAPI(){
         return new OpenAPI().info (new Info()
-                .title("OPEN API MICROSERVICIO CATÁLOGO")
+                .title("OPEN API MICROSERVICIO CLIENTE")
                 .version("0.0.1")
-                .description("servicio web catalogo")
+                .description("servicio web cliente")
                 .termsOfService("http://swagger.io/terms")
                 .license (new License().name("Apache 2.0").url("http://springdoc.org"))
         );
