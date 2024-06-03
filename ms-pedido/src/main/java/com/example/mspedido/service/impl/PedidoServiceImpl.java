@@ -1,6 +1,7 @@
 package com.example.mspedido.service.impl;
 import com.example.mspedido.entity.Pedido;
 import com.example.mspedido.entity.PedidoDetalle;
+import com.example.mspedido.repository.PedidoDetalleRepository;
 import com.example.mspedido.repository.PedidoRepository;
 import com.example.mspedido.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ public class PedidoServiceImpl implements PedidoService {
     private PedidoRepository pedidoRepository;
 
 
-
     @Override
     public List<Pedido> listar() {
         return pedidoRepository.findAll();
@@ -22,14 +22,20 @@ public class PedidoServiceImpl implements PedidoService {
 
 
     @Override
-    public Pedido guardar(Pedido pedidos) {
-        return pedidoRepository.save(pedidos);
+    public Pedido guardar(Pedido pedido) {
+        return pedidoRepository.save(pedido);
     }
 
 
     @Override
-    public Pedido actualizar(Pedido pedidos) {
-        return pedidoRepository.save(pedidos);
+    public Pedido actualizar(Pedido pedido) {
+        return pedidoRepository.save(pedido);
+    }
+
+
+    @Override
+    public Optional<Pedido> listarPorId(Integer id) {
+        return pedidoRepository.findById(id);
     }
 
 
